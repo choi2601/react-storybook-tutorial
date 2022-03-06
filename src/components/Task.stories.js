@@ -35,3 +35,13 @@ Archived.args = {
         state: 'TASK_ARCHIVED'
     }
 }
+
+const longTitleString = `This task's name is absurdly large. In fact, I think if I keep going I might end up with content overflow. What will happen? The star that represents a pinned task could have text overlapping. The text could cut-off abruptly when it reaches the star. I hope not!`;
+
+export const LongTitle = Template.bind({}); // 회귀를 피하기 위한 스토리 추가_회귀 테스트의 커버리지를 높임
+LongTitle.args = {
+  task: {
+    ...Default.args.task,
+    title: longTitleString,
+  },
+};
